@@ -1,0 +1,71 @@
+﻿ul {
+    list-style-type: none;
+    margin:0%;
+    padding: 1%;
+    overflow: hidden;
+    background-color: #666;
+    position:fixed
+    top: 1;
+    width: 100%;
+}
+
+li {
+    float:none; display:inline-block;
+    border-right: 1px solid #bbb;
+}
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration:dashed;
+    }
+
+        /* Change the link color to #111 (black) on hover */
+        li a:hover {
+            background-color: #111;
+        }
+
+.active {
+    background-color: #4CAF50;
+}
+
+<script >
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length)
+
+{
+    slideIndex = 1
+}
+
+if (n < 1) {
+    slideIndex = slides.length
+}
+
+for (i = 0; i < slides.length; i++) {
+    slides [i].style.display = "none";
+}
+
+for (i = 0; i < dots.length; i++) {
+    dots [i].className = dots[i].className.replace(" active", "");
+}
+
+slides[slideIndex - 1].style.display = "block";
+dots[slideIndex - 1].className + = " active";
+}
+</script >
